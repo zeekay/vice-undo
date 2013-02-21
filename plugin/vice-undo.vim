@@ -1,4 +1,4 @@
-set undodir=expand('<sfile>:p:h:h').'/tmp'
+let &undodir=expand('<sfile>:p:h:h').'/tmp'
 set undofile
 set undolevels=100
 
