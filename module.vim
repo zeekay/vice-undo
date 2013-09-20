@@ -1,3 +1,7 @@
+if version < 703
+    finish
+endif
+
 call vice#Extend({
     \ 'commands': {
         \ 'UndotreeToggle': ['github:mbbill/undotree'],
