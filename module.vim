@@ -1,6 +1,4 @@
-if version < 703
-    finish
-endif
+if version < 700 | finish | endif
 
 call vice#Extend({
     \ 'commands': {
@@ -8,9 +6,11 @@ call vice#Extend({
     \ }
 \ })
 
-let &undodir=expand('<sfile>:p:h').'/tmp'
-set undofile
-set undolevels=100
+if has('persistent_undo')
+    let &undodir=expand('<sfile>:p:h').'/tmp'
+    set undofile
+    set undolevels=100
+endif
 
 let g:undotree_SplitLocation = 'botright'
 
