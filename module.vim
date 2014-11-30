@@ -1,5 +1,5 @@
 if has('persistent_undo')
-    let &undodir=expand('<sfile>:p:h').'/tmp'
+    let &undodir=g:vice.vim_dir.'/tmp/undo'
     set undofile
     set undolevels=100
 endif
